@@ -23,7 +23,7 @@ module PositiveTimeSupport::TimeExt
     "#{ wday_ja_short }曜"
   end
 
-  def w_day_ja_long
+  def wday_ja_long
     "#{ wday_ja_short }曜日"
   end
 
