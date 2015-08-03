@@ -1,5 +1,5 @@
 # 日付を扱うクラス Date に機能を追加するモジュール
-module PositiveTimeSupport::DateTimeExt
+module PositiveTimeSupport::DateExt
 
   # （日本の）祝日か否かを判定するメソッド
   # @return [Boolean]
