@@ -27,4 +27,10 @@ module PositiveTimeSupport::TimeExt
     "#{ wday_ja_short }曜日"
   end
 
+  # （日本の）祝日か否かを判定するメソッド
+  # @return [Boolean]
+  def holiday?
+    ::HolidayJapan.check( ::Date.new( year , month , day ) )
+  end
+
 end
