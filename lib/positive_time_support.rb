@@ -5,7 +5,7 @@ require "active_support/core_ext"
 
 require "date"
 
-[ :time , :date_time ].each do | filename |
+[ :time , :date , :date_time ].each do | filename |
   require_relative "positive_time_support/#{ filename }_ext"
 end
 
@@ -19,8 +19,12 @@ module PositiveTimeSupport
       include PositiveTimeSupport::TimeExt
     end
 
-    ::DateTime.class_eval do
+    ::Date.class_eval do
       include PositiveTimeSupport::TimeExt
+      include PositiveTimeSupport::DateExt
+    end
+
+    ::DateTime.class_eval do
       include PositiveTimeSupport::DateTimeExt
     end
 

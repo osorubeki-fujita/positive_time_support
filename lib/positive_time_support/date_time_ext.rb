@@ -3,14 +3,6 @@ module PositiveTimeSupport::DateTimeExt
 
   extend ::ActiveSupport::Concern
 
-  # （日本の）祝日か否かを判定するメソッド
-  # @return [Boolean]
-  # @note 現状では祝日の定義をはっきりさせていないため、必ず false を返すということにしておく。
-  # @todo 休日の定義
-  def holiday?
-    false
-  end
-
   # DateTime のインスタンスを、hh:mm の形の文字列に変換するメソッド
   # @return [String]
   def to_s_hour_and_min
