@@ -12,7 +12,7 @@ module PositiveTimeSupport::TimeExt
   end
 
   def to_strf_normal_ja
-    ymd = "#{ year }年#{ month }月#{ day }日"
+    ymd = to_strf_date_ja
     hms = strftime( "%H:%M:%S" )
     "#{ ymd } #{ hms }"
   end

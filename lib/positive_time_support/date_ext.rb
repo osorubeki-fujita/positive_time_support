@@ -23,4 +23,8 @@ module PositiveTimeSupport::DateExt
     ::HolidayJapan.check( ::Date.new( year , month , day ) )
   end
 
+  def to_strf_date_ja
+    "#{ year }年#{ month }月#{ day }日"
+  end
+
 end
