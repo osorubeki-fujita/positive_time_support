@@ -18,14 +18,17 @@ module PositiveTimeSupport
 
     ::Time.class_eval do
       include PositiveTimeSupport::TimeExt
+      include PositiveTimeSupport::DateExt
     end
 
     ::Date.class_eval do
-      include PositiveTimeSupport::TimeExt
-      # include PositiveTimeSupport::DateExt
+      include PositiveTimeSupport::DateExt
     end
 
+    # DateTime is a sub-class of Date
     ::DateTime.class_eval do
+      include PositiveTimeSupport::TimeExt
+      # include PositiveTimeSupport::DateExt
       include PositiveTimeSupport::DateTimeExt
     end
 

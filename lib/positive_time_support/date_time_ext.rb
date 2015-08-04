@@ -3,12 +3,6 @@ module PositiveTimeSupport::DateTimeExt
 
   extend ::ActiveSupport::Concern
 
-  # DateTime のインスタンスを、hh:mm の形の文字列に変換するメソッド
-  # @return [String]
-  def to_s_hour_and_min
-    self.strftime( "%H\:%M" )
-  end
-
   # 日付・時刻を扱うクラス DateTime にクラスメソッドを追加するためのモジュール
   module ClassMethods
 
